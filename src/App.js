@@ -3,11 +3,14 @@ import './App.css';
 import Navbar from './Components/Navbar'; // Corrected import path
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Cart from "./Components/Cart";
+
+import Home from "./Components/Home";
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
             <Navbar />
+           <Home/>
             <Routes>
                 <Route path='/' element={<shop/>}></Route>
                 <Route path='/mens' element={<shopCategory category='men'/>}></Route>

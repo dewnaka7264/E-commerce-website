@@ -1,0 +1,23 @@
+/* src/NewReleases.css */
+.new-releases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to right, #3693a3, #000000); /* Gradient background */
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.new-releases h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.new-releases p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}

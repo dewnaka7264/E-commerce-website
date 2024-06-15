@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className="nav-logo">
-                <img src={gymshark} alt="gymshark" />
+                <Link style={{textDecoration:'none'}} to='/Home'><img src={gymshark} alt="gymshark" /></Link>
                 <p>GymShark</p>
             </div>
             <ul className="nav-menu">
