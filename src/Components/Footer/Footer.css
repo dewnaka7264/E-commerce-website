@@ -1,0 +1,29 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+
+}
+.social-icons .icon {
+    color: white;
+    text-decoration: none;
+    transition: color 1s ease;
+}
+
+.social-icons .icon:hover {
+    color: #1da1f2; /* Example color for Twitter */
+}
+
+.footer-content {
+    font-size: 0.9em;
+}

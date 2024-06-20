@@ -1,12 +1,13 @@
 import React from 'react';
-import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaTwitterSquare} from 'react-icons/fa';
 import './Footer.css'
+import {FaXTwitter} from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div>
+        <footer className="footer">
         <div className='social-icons'>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon"> <FaTwitter
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon"> <FaXTwitter
                 size={30}/></a>
 
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon"> <FaFacebook
@@ -24,7 +25,7 @@ const Footer = () => {
     <div className="footer-content" >
         <p> &copy; 2024 GYMSHARK. All rights reserved.</p>
     </div>
-        </div>
+        </footer>
 
     );
 };
