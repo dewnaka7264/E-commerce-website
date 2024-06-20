@@ -3,7 +3,7 @@ import NewReleases from './NewReleases';
 
 const Home = () => {
     return (
-        <div>
+        <div className="Home">
             <NewReleases />
         </div>
     );
