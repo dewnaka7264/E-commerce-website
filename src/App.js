@@ -5,7 +5,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Cart from "./Components/Cart";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer/Footer";
-
+import ProductList from "./Components/ProductList/ProductList";
 function App() {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ function App() {
                 <Route path='/accesories' element={<shopCategory category='accesories'/>}></Route>
                 <Route path='/product' element={<product/>}></Route>
                 <Route path=':productId' element={<product/>}></Route>
+                <Route path=':productlist' element={<ProductList/>}></Route>
 
                 <Route path='/cart' element={<Cart/>}></Route>
 
