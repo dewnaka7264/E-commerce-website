@@ -12,7 +12,7 @@ const NewReleases = () => {
         <div className="new-releases">
             <h1>New Releases</h1>
             <p>Check out the latest arrivals in our gym clothing collection.</p>
-            <div className='buttonReleases'><button>products</button></div>
+            <div ><button className='buttonReleases'>Products</button></div>
         </div>
     );
 };

@@ -9,3 +9,18 @@
     display: flex;
     gap: 20px;
 }
+.item-prices-new{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.item-prices-old{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
