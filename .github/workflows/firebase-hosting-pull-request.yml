@@ -3,7 +3,11 @@ name: Deploy to Firebase Hosting on PR
 on:
   pull_request:
     branches:
+<<<<<<< HEAD
       - master
+=======
+      - test-workflow
+>>>>>>> 3a0d3b026f3401fab7463a97a299f200561fa66c
 
 jobs:
   build_and_deploy:
@@ -29,4 +33,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           channelId: pr${{ github.event.number }}
-          projectId: your-firebase-project-id
+          projectId: gymshark-732cd
