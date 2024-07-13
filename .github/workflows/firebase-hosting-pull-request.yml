@@ -3,11 +3,7 @@ name: Deploy to Firebase Hosting on PR
 on:
   pull_request:
     branches:
-<<<<<<< HEAD
-      - master
-=======
-      - test-workflow
->>>>>>> 3a0d3b026f3401fab7463a97a299f200561fa66c
+    - master
 
 jobs:
   build_and_deploy:
