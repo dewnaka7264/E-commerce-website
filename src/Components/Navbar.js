@@ -11,14 +11,16 @@ import {Link} from "react-router-dom";
 
 const Navbar = () => {
     const [selectedPage, setSelectedPage] = useState('home');
-
+    const [userName, setUserName] = useState(null);
     const handleNavClick = (page) => {
         setSelectedPage(page);
     };
     const handleGoogleLogin = async () => {
         try {
             const result = await signInWithPopup(auth, provider);
+            setUserName(result.user.displayName);
             alert(`Login successful! Welcome ${result.user.displayName}`);
+
         } catch (error) {
             alert('Login failed: ' + error.message);
         }
@@ -41,10 +43,14 @@ const Navbar = () => {
             <ul className="nav-menu">
                 <li className={getClassName('women')} onClick={() => handleNavClick('women')}><Link style={{textDecoration:'none'}} to='/Women'>WOMEN</Link></li>
                 <li className={getClassName('men')} onClick={() => handleNavClick('men')}><Link style={{textDecoration:'none'}} to='/Men'>MEN</Link></li>
-                <li className={getClassName('accessories')} onClick={() => handleNavClick('accessories')}><Link style={{textDecoration:'none'}} to='/Accessories'>ACCESSORIES</Link></li>
+                <li className={getClassName('accessories')} onClick={() => handleNavClick('accessories')}><Link style={{textDecoration:'none'}} to='/Accessories'>ACCESSORIES </Link></li>
             </ul>
             <div className="nav-login-cart">
-                <button onClick={handleGoogleLogin}>Login</button>
+                {userName ? (
+                    <button>{userName}</button>
+                ) : (
+                    <button onClick={handleGoogleLogin}>Login</button>
+                )}
                 <Link to ='/Cart'><img src={cart} alt='cart'/></Link>
                 <div className="nav-cart-count">0</div>
             </div>

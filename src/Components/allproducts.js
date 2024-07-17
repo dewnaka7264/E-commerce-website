@@ -1,4 +1,4 @@
-const all_products = [
+let all_products = [
     // Men's Products
     {
         id: 1,
@@ -362,14 +362,7 @@ const all_products = [
         newPrice: 60.0,
         oldPrice: 80.0,
     },
-    {
-        id: 46,
-        name: "Pull-Up Bar",
-        category: 'accessories',
-        image: 'pull_up_bar.png',
-        newPrice: 60.0,
-        oldPrice: 80.0,
-    },
+
 ];
 
 export default all_products;
