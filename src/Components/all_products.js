@@ -1,4 +1,4 @@
-let all_products = [
+const all_products = [
     // Men's Products
     {
         id: 1,
@@ -364,5 +364,6 @@ let all_products = [
     },
 
 ];
+console.log(all_products); // Add this line in all_products.js to verify
 
 export default all_products;

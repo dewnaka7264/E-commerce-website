@@ -4,53 +4,29 @@ import './Navbar.css';
 import cart from '../Media/cart.png';
 import gymshark from '../Media/Gymshark-Logo-700x394.png';
 
-import { auth, provider } from '../firebaseConfig';
-import { signInWithPopup } from 'firebase/auth';
 import {Link} from "react-router-dom";
 
 
 const Navbar = () => {
-    const [selectedPage, setSelectedPage] = useState('home');
-    const [userName, setUserName] = useState(null);
-    const handleNavClick = (page) => {
-        setSelectedPage(page);
-    };
-    const handleGoogleLogin = async () => {
-        try {
-            const result = await signInWithPopup(auth, provider);
-            setUserName(result.user.displayName);
-            alert(`Login successful! Welcome ${result.user.displayName}`);
 
-        } catch (error) {
-            alert('Login failed: ' + error.message);
-        }
-    };
+const[menu,setMenu] =useState("shop");
 
-    const getClassName = (page) => {
-        let className = 'nav-item';
-        if (selectedPage === page) {
-            className += ' selected';
-        }
-        return className;
-    };
 
     return (
         <div className='navbar'>
             <div className="nav-logo">
-                <Link className={getClassName('Home')} onClick={()=> handleNavClick('Home')} style={{textDecoration:'none'}} to='/Home'><img src={gymshark} alt="gymshark" /></Link>
+                <img src={gymshark}></img>
+
                 <p>GymShark</p>
             </div>
             <ul className="nav-menu">
-                <li className={getClassName('women')} onClick={() => handleNavClick('women')}><Link style={{textDecoration:'none'}} to='/Women'>WOMEN</Link></li>
-                <li className={getClassName('men')} onClick={() => handleNavClick('men')}><Link style={{textDecoration:'none'}} to='/Men'>MEN</Link></li>
-                <li className={getClassName('accessories')} onClick={() => handleNavClick('accessories')}><Link style={{textDecoration:'none'}} to='/Accessories'>ACCESSORIES </Link></li>
+                <li  onClick={() => {setMenu('shop')}}><Link style={{textDecoration:'none'}} to='/'>SHOP</Link>{menu==="shop"?<h/>:<></>}</li>
+                <li  onClick={() => {setMenu('women')}}><Link style={{textDecoration:'none'}} to='/women'>WOMEN</Link>{menu==="women"?<h/>:<></>}</li>
+                <li  onClick={() => {setMenu('men')}}><Link style={{textDecoration:'none'}} to='/men'>MEN</Link>{menu==="men"?<h/>:<></>}</li>
+                <li  onClick={() => {setMenu('accessories')}}><Link style={{textDecoration:'none'}} to='/accessories'>ACCESSORIES</Link> {menu==="accessories"?<h/>:<></>}</li>
             </ul>
             <div className="nav-login-cart">
-                {userName ? (
-                    <button>{userName}</button>
-                ) : (
-                    <button onClick={handleGoogleLogin}>Login</button>
-                )}
+                <Link to='/login'><button>Login</button></Link>
                 <Link to ='/Cart'><img src={cart} alt='cart'/></Link>
                 <div className="nav-cart-count">0</div>
             </div>
