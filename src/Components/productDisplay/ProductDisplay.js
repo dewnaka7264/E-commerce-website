@@ -4,10 +4,12 @@ import React from 'react';
 import product from "../Product";
 
 function ProductDisplay(props) {
+    const {product} =props;
     return (
         <div className='productDisplay'>
             <div className='productdisplay-left'>
                 <div className='productdisplay-img-list'>
+
                     <img src={product.image} alt=''></img>
                     <img src={product.image} alt=''></img>
                     <img src={product.image} alt=''></img>
@@ -20,8 +22,18 @@ function ProductDisplay(props) {
                 <div className='productdisplay-right'>
                     <h1>{product.name}</h1>
                     <div className='productdisplay-price'> ${product.newPrice}</div>
-                    <div className='productdisplay-description'>{product.descripton}</div>
+                    <div className='productdisplay-description'>{product.description}</div>
                 </div>
+                <div className='productdisplay-size'>
+                    <h4>Select Size</h4>
+                    <div className='right-size-icon'>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                </div>
+                <button> Add to Cart</button>
 
             </div>
 

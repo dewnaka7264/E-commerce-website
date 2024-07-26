@@ -9,7 +9,7 @@ const Product = () => {
 
     return (
         <div>
-<ProductDisplay product={product}/>
+        <ProductDisplay product={product}/>
         </div>
     );
 };
