@@ -1,0 +1,105 @@
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.social-button {
+    border: none;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-button svg {
+    margin-right: 8px;
+}
+
+.google {
+    color: #db4437;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.github {
+    color: #333;
+}
+
+.feide {
+    color: #0077cc; /* Choose a color that represents Feide */
+}
+
+.or-divider {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.forgot-password {
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.signup{
+    color: green;
+}

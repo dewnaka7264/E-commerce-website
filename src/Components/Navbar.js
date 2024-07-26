@@ -26,7 +26,7 @@ const[menu,setMenu] =useState("shop");
                 <li  onClick={() => {setMenu('accessories')}}><Link style={{textDecoration:'none'}} to='/accessories'>ACCESSORIES</Link> {menu==="accessories"?<h/>:<></>}</li>
             </ul>
             <div className="nav-login-cart">
-                <Link to='/login'><button>Login</button></Link>
+                <Link to='/LoginSignup'><button>Login</button></Link>
                 <Link to ='/Cart'><img src={cart} alt='cart'/></Link>
                 <div className="nav-cart-count">0</div>
             </div>

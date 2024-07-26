@@ -27,7 +27,7 @@ function App() {
                     <Route path=':productlist' element={<ProductList/>}></Route>
 
                     <Route path='/cart' element={<Cart/>}></Route>
-                    <Route path='/login' element={<LoginSignup/>}></Route>
+                    <Route path='/LoginSignup' element={<LoginSignup/>}></Route>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
