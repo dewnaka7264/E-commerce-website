@@ -43,8 +43,10 @@ import gym_socks from '../Media/GymSocks.webp';
 import sweatbands from '../Media/Sweatbands.webp';
 import kettlebell from '../Media/Kettlebell.jpg';
 import pull_up_bar from '../Media/PullUpBar.webp';
+
+
+
 const all_products = [
-    // Men's Products
     {
         id: 1,
         name: "Men's Long Sleeved Tee",
@@ -52,6 +54,7 @@ const all_products = [
         image: men_long_sleeved_tee,
         newPrice: 30.0,
         oldPrice: 50.0,
+        description: "Stay comfortable and stylish with our Men's Long Sleeved Tee, perfect for cooler days and casual outings."
     },
     {
         id: 2,
@@ -60,6 +63,7 @@ const all_products = [
         image: men_training_shorts,
         newPrice: 25.0,
         oldPrice: 40.0,
+        description: "Designed for peak performance, our Men's Training Shorts provide flexibility and breathability for any workout."
     },
     {
         id: 3,
@@ -68,6 +72,7 @@ const all_products = [
         image: men_running_jacket,
         newPrice: 60.0,
         oldPrice: 80.0,
+        description: "Run in style with our Men's Running Jacket, offering lightweight protection against the elements."
     },
     {
         id: 4,
@@ -76,6 +81,7 @@ const all_products = [
         image: men_compression_tights,
         newPrice: 35.0,
         oldPrice: 60.0,
+        description: "Enhance your performance with our Men's Compression Tights, designed to support muscles and reduce fatigue."
     },
     {
         id: 5,
@@ -84,6 +90,7 @@ const all_products = [
         image: men_hoodie,
         newPrice: 50.0,
         oldPrice: 70.0,
+        description: "Our Men's Hoodie offers ultimate comfort and warmth, making it a perfect addition to your casual wardrobe."
     },
     {
         id: 6,
@@ -92,6 +99,7 @@ const all_products = [
         image: men_joggers,
         newPrice: 45.0,
         oldPrice: 65.0,
+        description: "Relax or exercise in style with our Men's Joggers, featuring a comfortable fit and modern design."
     },
     {
         id: 7,
@@ -100,6 +108,7 @@ const all_products = [
         image: men_tank_top,
         newPrice: 20.0,
         oldPrice: 35.0,
+        description: "Stay cool and dry during your workouts with our Men's Tank Top, designed for maximum breathability."
     },
     {
         id: 8,
@@ -108,6 +117,7 @@ const all_products = [
         image: men_training_tee,
         newPrice: 25.0,
         oldPrice: 40.0,
+        description: "Our Men's Training Tee combines style and functionality, perfect for any training session."
     },
     {
         id: 9,
@@ -116,6 +126,7 @@ const all_products = [
         image: men_sleeveless_hoodie,
         newPrice: 40.0,
         oldPrice: 60.0,
+        description: "Layer up with our Men's Sleeveless Hoodie, ideal for added warmth without restricting movement."
     },
     {
         id: 10,
@@ -124,6 +135,7 @@ const all_products = [
         image: men_track_pants,
         newPrice: 50.0,
         oldPrice: 70.0,
+        description: "Our Men's Track Pants offer comfort and style, perfect for both workouts and casual wear."
     },
     {
         id: 11,
@@ -132,6 +144,7 @@ const all_products = [
         image: men_performance_tshirt,
         newPrice: 30.0,
         oldPrice: 45.0,
+        description: "Experience peak performance with our Men's Performance Tshirt, designed to keep you cool and comfortable."
     },
     {
         id: 12,
@@ -140,6 +153,7 @@ const all_products = [
         image: men_zip_up_hoodie,
         newPrice: 55.0,
         oldPrice: 75.0,
+        description: "Our Men's Zip-Up Hoodie provides the perfect blend of comfort and convenience for any occasion."
     },
     {
         id: 13,
@@ -148,6 +162,7 @@ const all_products = [
         image: men_sweatshirt,
         newPrice: 40.0,
         oldPrice: 60.0,
+        description: "Stay cozy and stylish with our Men's Sweatshirt, ideal for everyday wear."
     },
     {
         id: 14,
@@ -156,6 +171,7 @@ const all_products = [
         image: men_gym_bag,
         newPrice: 35.0,
         oldPrice: 50.0,
+        description: "Carry all your essentials with ease in our Men's Gym Bag, designed for durability and style."
     },
     {
         id: 15,
@@ -164,8 +180,8 @@ const all_products = [
         image: men_beanie,
         newPrice: 15.0,
         oldPrice: 25.0,
+        description: "Keep warm and look cool with our Men's Beanie, a perfect accessory for chilly days."
     },
-    // Women's Products
     {
         id: 16,
         name: "Women's Sports Bra",
@@ -173,6 +189,7 @@ const all_products = [
         image: women_sports_bra,
         newPrice: 25.0,
         oldPrice: 40.0,
+        description: "Achieve optimal support and comfort during workouts with our Women's Sports Bra."
     },
     {
         id: 17,
@@ -181,6 +198,7 @@ const all_products = [
         image: women_leggings,
         newPrice: 40.0,
         oldPrice: 60.0,
+        description: "Our Women's Leggings offer flexibility and comfort, perfect for any active lifestyle."
     },
     {
         id: 18,
@@ -189,6 +207,7 @@ const all_products = [
         image: women_crop_top,
         newPrice: 30.0,
         oldPrice: 50.0,
+        description: "Stay stylish and comfortable with our Women's Crop Top, ideal for both workouts and casual wear."
     },
     {
         id: 19,
@@ -197,6 +216,7 @@ const all_products = [
         image: women_running_jacket,
         newPrice: 60.0,
         oldPrice: 80.0,
+        description: "Stay protected from the elements with our Women's Running Jacket, designed for maximum performance."
     },
     {
         id: 20,
@@ -205,6 +225,7 @@ const all_products = [
         image: women_training_shorts,
         newPrice: 25.0,
         oldPrice: 40.0,
+        description: "Our Women's Training Shorts provide the perfect combination of style and functionality for your workouts."
     },
     {
         id: 21,
@@ -213,6 +234,7 @@ const all_products = [
         image: women_tank_top,
         newPrice: 20.0,
         oldPrice: 35.0,
+        description: "Stay cool and comfortable during your workouts with our Women's Tank Top, designed for breathability."
     },
     {
         id: 22,
@@ -221,6 +243,7 @@ const all_products = [
         image: women_zip_up_hoodie,
         newPrice: 55.0,
         oldPrice: 75.0,
+        description: "Our Women's Zip-Up Hoodie combines style and comfort, perfect for any casual occasion."
     },
     {
         id: 23,
@@ -229,6 +252,7 @@ const all_products = [
         image: women_sweatshirt,
         newPrice: 40.0,
         oldPrice: 60.0,
+        description: "Stay cozy and stylish with our Women's Sweatshirt, a must-have for any wardrobe."
     },
     {
         id: 24,
@@ -237,6 +261,7 @@ const all_products = [
         image: women_joggers,
         newPrice: 45.0,
         oldPrice: 65.0,
+        description: "Relax or exercise in our Women's Joggers, designed for comfort and style."
     },
     {
         id: 25,
@@ -245,6 +270,7 @@ const all_products = [
         image: women_performance_shorts,
         newPrice: 30.0,
         oldPrice: 45.0,
+        description: "Enhance your performance with our Women's Performance Shorts, offering comfort and flexibility."
     },
     {
         id: 26,
@@ -253,6 +279,7 @@ const all_products = [
         image: women_track_pants,
         newPrice: 50.0,
         oldPrice: 70.0,
+        description: "Stay comfortable and stylish with our Women's Track Pants, perfect for any activity."
     },
     {
         id: 27,
@@ -261,6 +288,7 @@ const all_products = [
         image: women_sleeveless_hoodie,
         newPrice: 40.0,
         oldPrice: 60.0,
+        description: "Layer up with our Women's Sleeveless Hoodie, offering warmth without restricting movement."
     },
     {
         id: 28,
@@ -269,6 +297,7 @@ const all_products = [
         image: women_training_tee,
         newPrice: 25.0,
         oldPrice: 40.0,
+        description: "Our Women's Training Tee combines style and functionality, ideal for any training session."
     },
     {
         id: 29,
@@ -277,6 +306,7 @@ const all_products = [
         image: women_gym_bag,
         newPrice: 35.0,
         oldPrice: 50.0,
+        description: "Carry all your essentials in our Women's Gym Bag, designed for durability and style."
     },
     {
         id: 30,
@@ -285,8 +315,8 @@ const all_products = [
         image: women_beanie,
         newPrice: 15.0,
         oldPrice: 25.0,
+        description: "Keep warm and look stylish with our Women's Beanie, perfect for chilly days."
     },
-    // Accessories
     {
         id: 31,
         name: "Water Bottle",
@@ -294,6 +324,7 @@ const all_products = [
         image: water_bottle,
         newPrice: 15.0,
         oldPrice: 25.0,
+        description: "Stay hydrated on the go with our durable and stylish Water Bottle."
     },
     {
         id: 32,
@@ -302,6 +333,7 @@ const all_products = [
         image: gym_towel,
         newPrice: 10.0,
         oldPrice: 20.0,
+        description: "Our Gym Towel is soft and absorbent, perfect for wiping away sweat during workouts."
     },
     {
         id: 33,
@@ -310,6 +342,7 @@ const all_products = [
         image: yoga_mat,
         newPrice: 35.0,
         oldPrice: 50.0,
+        description: "Enhance your practice with our Yoga Mat, providing comfort and stability for all poses."
     },
     {
         id: 34,
@@ -318,6 +351,7 @@ const all_products = [
         image: bandeau,
         newPrice: 20.0,
         oldPrice: 30.0,
+        description: "Our BANDEAU offers a comfortable and stylish solution for any workout or casual wear."
     },
     {
         id: 35,
@@ -326,6 +360,7 @@ const all_products = [
         image: weightlifting_gloves,
         newPrice: 25.0,
         oldPrice: 35.0,
+        description: "Protect your hands and enhance your grip with our Weightlifting Gloves."
     },
     {
         id: 36,
@@ -334,6 +369,7 @@ const all_products = [
         image: foam_roller,
         newPrice: 30.0,
         oldPrice: 45.0,
+        description: "Our Foam Roller is perfect for muscle recovery and reducing soreness after workouts."
     },
     {
         id: 37,
@@ -342,6 +378,7 @@ const all_products = [
         image: skipping_rope,
         newPrice: 15.0,
         oldPrice: 25.0,
+        description: "Improve your cardio with our durable and lightweight Skipping Rope."
     },
     {
         id: 38,
@@ -350,6 +387,7 @@ const all_products = [
         image: gym_backpack,
         newPrice: 45.0,
         oldPrice: 60.0,
+        description: "Carry all your gear with ease in our spacious and stylish Gym Backpack."
     },
     {
         id: 39,
@@ -358,6 +396,7 @@ const all_products = [
         image: shaker_bottle,
         newPrice: 10.0,
         oldPrice: 20.0,
+        description: "Mix your protein shakes effortlessly with our convenient Shaker Bottle."
     },
     {
         id: 40,
@@ -366,6 +405,7 @@ const all_products = [
         image: cap,
         newPrice: 70.0,
         oldPrice: 100.0,
+        description: "Stay cool and stylish with our Cap, perfect for outdoor activities."
     },
     {
         id: 41,
@@ -374,6 +414,7 @@ const all_products = [
         image: ankle_weights,
         newPrice: 25.0,
         oldPrice: 35.0,
+        description: "Enhance your workouts with our adjustable Ankle Weights, perfect for adding resistance."
     },
     {
         id: 42,
@@ -382,6 +423,7 @@ const all_products = [
         image: gym_socks,
         newPrice: 10.0,
         oldPrice: 15.0,
+        description: "Stay comfortable and dry with our breathable Gym Socks, ideal for any workout."
     },
     {
         id: 43,
@@ -390,6 +432,7 @@ const all_products = [
         image: sweatbands,
         newPrice: 8.0,
         oldPrice: 12.0,
+        description: "Keep sweat out of your eyes with our comfortable and absorbent Sweatbands."
     },
     {
         id: 44,
@@ -398,6 +441,7 @@ const all_products = [
         image: kettlebell,
         newPrice: 50.0,
         oldPrice: 70.0,
+        description: "Our Kettlebell is perfect for strength training and enhancing your workout routine."
     },
     {
         id: 45,
@@ -406,10 +450,10 @@ const all_products = [
         image: pull_up_bar,
         newPrice: 60.0,
         oldPrice: 80.0,
+        description: "Build upper body strength with our sturdy and reliable Pull-Up Bar."
     },
 ];
 
 console.log(all_products);
 
 export default all_products;
-
