@@ -19,11 +19,14 @@ function ProductDisplay(props) {
                     <img className='productdisplay-main-img' src={product.image} alt=''></img>
 
                 </div>
-                <div className='productdisplay-right'>
-                    <h1>{product.name}</h1>
-                    <div className='productdisplay-price'> ${product.newPrice}</div>
-                    <div className='productdisplay-description'>{product.description}</div>
-                </div>
+
+
+            </div>
+            <div className='productdisplay-right'>
+                <h1>{product.name}</h1>
+                <div className='productdisplay-price'> ${product.newPrice}</div>
+                <div className='productdisplay-description'>{product.description}</div>
+
                 <div className='productdisplay-size'>
                     <h4>Select Size</h4>
                     <div className='right-size-icon'>
@@ -34,8 +37,9 @@ function ProductDisplay(props) {
                     </div>
                 </div>
                 <button> Add to Cart</button>
-
             </div>
+
+
 
         </div>
     );
