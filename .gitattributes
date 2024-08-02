@@ -1,0 +1,19 @@
+# Specify languages for source files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.scss linguist-language=SCSS
+
+# Treat markdown files as documentation
+*.md linguist-documentation=true
+
+# Treat JSON files as data
+*.json linguist-vendored=true
+
+# Treat configuration files as data
+*.yml linguist-vendored=true
+*.yaml linguist-vendored=true
+*.env linguist-vendored=true
