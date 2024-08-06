@@ -2,10 +2,12 @@ import './ProductDisplay.css'
 
 import React from 'react';
 import product from "../Product";
+import ReviewsSection from "../ReviewsSection/ReviewsSection";
 
 function ProductDisplay(props) {
     const {product} =props;
     return (
+        <div>
         <div className='productDisplay'>
             <div className='productdisplay-left'>
                 <div className='productdisplay-img-list'>
@@ -45,7 +47,11 @@ function ProductDisplay(props) {
 
 
 
+
         </div>
+            <ReviewsSection/>
+        </div>
+
     );
 }
 

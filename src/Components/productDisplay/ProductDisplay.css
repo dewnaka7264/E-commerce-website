@@ -65,3 +65,15 @@
 .productdisplay-price{
     font-weight: bold;
 }
+.productdisplay-quantity {
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
