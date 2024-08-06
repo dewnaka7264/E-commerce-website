@@ -35,6 +35,10 @@ function ProductDisplay(props) {
                         <div>L</div>
                         <div>XL</div>
                     </div>
+                    <div className='productdisplay-quantity'>
+                        <h4>Quantity</h4>
+                        <input type='number' min='1' defaultValue='1' className='quantity-input' />
+                    </div>
                 </div>
                 <button className='AddtoCartButton'> Add to Cart</button>
             </div>
