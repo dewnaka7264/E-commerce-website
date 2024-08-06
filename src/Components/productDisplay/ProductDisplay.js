@@ -36,7 +36,7 @@ function ProductDisplay(props) {
                         <div>XL</div>
                     </div>
                 </div>
-                <button> Add to Cart</button>
+                <button className='AddtoCartButton'> Add to Cart</button>
             </div>
 
 

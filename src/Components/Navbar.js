@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './NavBar.css';
 
 import cart from '../Media/cart.png';
 import gymshark from '../Media/Gymshark-Logo-700x394.png';
@@ -15,7 +15,7 @@ const[menu,setMenu] =useState("shop");
     return (
         <div className='navbar'>
             <div className="nav-logo">
-                <img src={gymshark}></img>
+                <Link to ='/'><img src={gymshark}></img></Link>
 
                 <p>GymShark</p>
             </div>
