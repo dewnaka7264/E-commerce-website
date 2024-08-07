@@ -1,11 +1,14 @@
 import './ProductDisplay.css'
 
-import React from 'react';
+import React, {useState} from 'react';
 import product from "../Product";
 import ReviewsSection from "../ReviewsSection/ReviewsSection";
 
-function ProductDisplay(props) {
+function ProductDisplay(props,{addToCart}) {
     const {product} =props;
+
+    const [selectedSize,setSelectedSize] =useState('');
+    const [quantity,setQuantity] = useState(1);
     return (
         <div>
         <div className='productDisplay'>
@@ -32,10 +35,10 @@ function ProductDisplay(props) {
                 <div className='productdisplay-size'>
                     <h4>Select Size</h4>
                     <div className='right-size-icon'>
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
-                        <div>XL</div>
+                        <div onClick={() =>{ console.log('S'); setSelectedSize('S'); }}>S</div>
+                        <div onClick={()=>{ console.log('M'); setSelectedSize('S'); }}>M</div>
+                        <div onClick={()=>{ console.log('L'); setSelectedSize('S'); }}>L</div>
+                        <div onClick={()=>{ console.log('XL'); setSelectedSize('S'); }}>XL</div>
                     </div>
                     <div className='productdisplay-quantity'>
                         <h4>Quantity</h4>

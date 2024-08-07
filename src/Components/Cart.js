@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 import './Cart.css';
 const Cart = () => {
     const [cartItems, setCartItems] = useState([
-        { id: 1, name: 'Product 1', price: 50, quantity: 1 },
-        { id: 2, name: 'Product 2', price: 30, quantity: 1 },
-        { id: 3, name: 'Product 3', price: 20, quantity: 34},
     ]);
 
     const handleRemove = (id) => {
