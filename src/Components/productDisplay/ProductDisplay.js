@@ -7,6 +7,9 @@ import ReviewsSection from "../ReviewsSection/ReviewsSection";
 function ProductDisplay(props,{addToCart}) {
     const {product} =props;
 
+    const handleAddToCart = () => {
+        addToCart(product, quantity, selectedSize);
+    };
     const [selectedSize,setSelectedSize] =useState('');
     const [quantity,setQuantity] = useState(1);
     return (
@@ -42,10 +45,10 @@ function ProductDisplay(props,{addToCart}) {
                     </div>
                     <div className='productdisplay-quantity'>
                         <h4>Quantity</h4>
-                        <input type='number' min='1' defaultValue='1' className='quantity-input' />
+                        <input type='number' min='1' defaultValue='1' value={quantity} onChange={(e) => {console.log(quantity);setQuantity(parseInt(e.target.value))}} className='quantity-input' />
                     </div>
                 </div>
-                <button className='AddtoCartButton'> Add to Cart</button>
+                <button className='AddtoCartButton' onClick={()=>{console.log('handle Add to cart'); handleAddToCart();}}> Add to Cart</button>
             </div>
 
 
