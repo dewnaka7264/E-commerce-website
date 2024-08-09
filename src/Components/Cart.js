@@ -15,7 +15,7 @@ const Cart = ({ cartItems, setCartItems }) => {
     };
 
     const getTotal = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+        return cartItems.reduce((total, item) => total + item.newPrice * item.quantity, 0);
     };
 
     return (
@@ -29,7 +29,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                         {cartItems.map(item => (
                             <li key={item.id}>
                                 <span>{item.name}</span>
-                                <span>${item.price}</span>
+                                <span>${item.newPrice}</span>
                                 <input
                                     type="number"
                                     value={item.quantity}
