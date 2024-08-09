@@ -1,14 +1,18 @@
 import './ProductDisplay.css'
 
 import React, {useState} from 'react';
-import product from "../Product";
-import ReviewsSection from "../ReviewsSection/ReviewsSection";
+import Product from "../Product";
 
-function ProductDisplay(props,{addToCart}) {
-    const {product} =props;
+import ReviewsSection from "../ReviewsSection/ReviewsSection";
+function ProductDisplay({addToCart,product}) {
+    // const {product} =props;
 
     const handleAddToCart = () => {
-        addToCart(product, quantity, selectedSize);
+        if (selectedSize && quantity > 0) {
+            addToCart(product, quantity, selectedSize);
+        } else {
+            console.log('Please select a size and quantity');
+        }
     };
     const [selectedSize,setSelectedSize] =useState('');
     const [quantity,setQuantity] = useState(1);

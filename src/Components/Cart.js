@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Cart.css';
-const Cart = () => {
-    const [cartItems, setCartItems] = useState([
-    ]);
 
+const Cart = ({ cartItems, setCartItems }) => {
     const handleRemove = (id) => {
         const updatedItems = cartItems.filter(item => item.id !== id);
         setCartItems(updatedItems);
@@ -11,7 +9,7 @@ const Cart = () => {
 
     const handleQuantityChange = (id, quantity) => {
         const updatedItems = cartItems.map(item =>
-            item.id === id ? { ...item, quantity: quantity } : item
+            item.id === id ? { ...item, quantity } : item
         );
         setCartItems(updatedItems);
     };
@@ -50,6 +48,5 @@ const Cart = () => {
         </div>
     );
 };
-
 
 export default Cart;
