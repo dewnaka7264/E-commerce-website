@@ -29,6 +29,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                         {cartItems.map(item => (
                             <li key={item.id}>
                                 <span>{item.name}</span>
+                                <span>{item.size}</span>
                                 <span>${item.newPrice}</span>
                                 <input
                                     type="number"
