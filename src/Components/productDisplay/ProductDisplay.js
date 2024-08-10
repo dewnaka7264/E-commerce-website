@@ -6,19 +6,22 @@ import Product from "../Product";
 import ReviewsSection from "../ReviewsSection/ReviewsSection";
 import Alert from '@mui/material/Alert';
 import WarningAlert from "./WarningAlert";
+import ConfirmationAlert from "./ConfirmationAlert";
 function ProductDisplay({addToCart,product}) {
     // const {product} =props;
-const [showWarning,setShowWarning] =useState(false);
+    const [open, setOpen] = useState(false);
+    const [Confirm,setConfirm] =useState(false);
     const handleAddToCart = () => {
         if (selectedSize && quantity > 0) {
             addToCart(product, quantity, selectedSize);
 
             console.log('Added to cart successfully.');
-            setShowWarning(false);
+            setOpen(false);
+            setConfirm(true);
         } else {
             console.log('Please select a size and quantity');
-            setShowWarning(true);
-
+            setOpen(true);
+            setConfirm(false);
 
         }
     };
@@ -26,7 +29,10 @@ const [showWarning,setShowWarning] =useState(false);
     const [quantity,setQuantity] = useState(1);
     return (
         <div>
+            <WarningAlert open={open} setOpen={setOpen} />
+            <ConfirmationAlert Confirm={Confirm} setConfirm ={setConfirm}/>
         <div className='productDisplay'>
+
             <div className='productdisplay-left'>
                 <div className='productdisplay-img-list'>
 
@@ -61,7 +67,7 @@ const [showWarning,setShowWarning] =useState(false);
                     </div>
                 </div>
                 <button className='AddtoCartButton' onClick={()=>{console.log('handle Add to cart'); handleAddToCart();}}> Add to Cart</button>
-                {showWarning && <WarningAlert />}
+
             </div>
 
 
