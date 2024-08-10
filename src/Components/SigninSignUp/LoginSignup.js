@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGoogle, FaFacebookF, FaGithub } from 'react-icons/fa'; // Import React icons
 import { HiExternalLink } from 'react-icons/hi'; // Feide icon or use a suitable icon
 import './LoginSignup.css'
+import GoogleAuthentication from "./googleAuthentication";
 const LoginSignup = () => {
     return (
         <div className="login-container">
@@ -9,9 +10,9 @@ const LoginSignup = () => {
             <p>Don't have an account?<span className='signup'>   Sign Up</span></p>
 
             <div className="social-login">
-                <button className="social-button google">
-                    <FaGoogle /> Google
-                </button>
+
+                <GoogleAuthentication/>
+
                 <button className="social-button facebook">
                     <FaFacebookF /> Facebook
                 </button>
