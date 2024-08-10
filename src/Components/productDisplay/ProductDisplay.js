@@ -4,14 +4,22 @@ import React, {useState} from 'react';
 import Product from "../Product";
 
 import ReviewsSection from "../ReviewsSection/ReviewsSection";
+import Alert from '@mui/material/Alert';
+import WarningAlert from "./WarningAlert";
 function ProductDisplay({addToCart,product}) {
     // const {product} =props;
-
+const [showWarning,setShowWarning] =useState(false);
     const handleAddToCart = () => {
         if (selectedSize && quantity > 0) {
             addToCart(product, quantity, selectedSize);
+
+            console.log('Added to cart successfully.');
+            setShowWarning(false);
         } else {
             console.log('Please select a size and quantity');
+            setShowWarning(true);
+
+
         }
     };
     const [selectedSize,setSelectedSize] =useState('');
@@ -53,6 +61,7 @@ function ProductDisplay({addToCart,product}) {
                     </div>
                 </div>
                 <button className='AddtoCartButton' onClick={()=>{console.log('handle Add to cart'); handleAddToCart();}}> Add to Cart</button>
+                {showWarning && <WarningAlert />}
             </div>
 
 
