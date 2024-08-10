@@ -42,10 +42,10 @@ function ProductDisplay({addToCart,product}) {
                 <div className='productdisplay-size'>
                     <h4>Select Size</h4>
                     <div className='right-size-icon'>
-                        <div onClick={() =>{ console.log('S'); setSelectedSize('S'); }}>S</div>
-                        <div onClick={()=>{ console.log('M'); setSelectedSize('S'); }}>M</div>
-                        <div onClick={()=>{ console.log('L'); setSelectedSize('S'); }}>L</div>
-                        <div onClick={()=>{ console.log('XL'); setSelectedSize('S'); }}>XL</div>
+                        <div onClick={() =>{ console.log('S'); setSelectedSize('S'); }} style={{color:selectedSize==='S'? 'red':'black'}}>S</div>
+                        <div onClick={()=>{ console.log('M'); setSelectedSize('M'); }} style={{color:selectedSize==='M'? 'red':'black'}}>M</div>
+                        <div onClick={()=>{ console.log('L'); setSelectedSize('L'); }} style={{color:selectedSize==='L'? 'red':'black'}}>L</div>
+                        <div onClick={()=>{ console.log('XL'); setSelectedSize('XL'); }} style={{color:selectedSize==='XL'? 'red':'black'}}>XL</div>
                     </div>
                     <div className='productdisplay-quantity'>
                         <h4>Quantity</h4>

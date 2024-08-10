@@ -9,7 +9,7 @@ import ProductList from "./Components/ProductList/ProductList";
 import ShopCategory from "./Components/ShopCategory";
 import Shop from "./Components/Shop";
 import Product from "./Components/Product";
-import LoginSignup from "./Components/LoginSignup";
+import LoginSignup from "./Components/SigninSignUp/LoginSignup";
 import productDisplay from "./Components/productDisplay/ProductDisplay";
 function App() {
     const [cartItems, setCartItems] = useState([]);
