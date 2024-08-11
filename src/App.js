@@ -11,8 +11,10 @@ import Shop from "./Components/Shop";
 import Product from "./Components/Product";
 import LoginSignup from "./Components/SigninSignUp/LoginSignup";
 import productDisplay from "./Components/productDisplay/ProductDisplay";
+import item from "./Items/Item";
 function App() {
     const [cartItems, setCartItems] = useState([]);
+    const totalItemsCount=cartItems.reduce((total,item)=>total+item.quantity,0);
 
     const addToCart = (product, quantity, size) => {
         const itemIndex = cartItems.findIndex(item => item.id === product.id && item.size === size);
@@ -24,10 +26,11 @@ function App() {
             setCartItems([...cartItems, { ...product, quantity, size }]);
         }
     };
+
     return (
         <div className="App">
             <BrowserRouter>
-                <Navbar/>
+                <Navbar totalItemsCount={totalItemsCount} />
 
                 <Routes>
                     <Route path='/' element={<Shop/>}></Route>

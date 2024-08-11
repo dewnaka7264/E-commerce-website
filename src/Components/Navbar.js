@@ -7,7 +7,7 @@ import gymshark from '../Media/Gymshark-Logo-700x394.png';
 import {Link} from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = ({totalItemsCount}) => {
 
 const[menu,setMenu] =useState("shop");
 
@@ -28,7 +28,7 @@ const[menu,setMenu] =useState("shop");
             <div className="nav-login-cart">
                 <Link to='/LoginSignup'><button>Login</button></Link>
                 <Link to ='/Cart'><img src={cart} alt='cart'/></Link>
-                <div className="nav-cart-count">0</div>
+                <div className="nav-cart-count">{totalItemsCount}</div>
             </div>
         </div>
     );

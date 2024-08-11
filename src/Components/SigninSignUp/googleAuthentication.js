@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { auth, provider, signInWithPopup, signOut } from "../../firebaseConfig";
 import './LoginSignup.css'
-import {FaGithub, FaGoogle} from 'react-icons/fa';
+import { FaGoogle} from 'react-icons/fa';
 const GoogleAuthentication = () => {
     const [user, setUser] = useState(null);
 
