@@ -6,12 +6,14 @@ import gymshark from '../Media/Gymshark-Logo-700x394.png';
 
 import {Link} from "react-router-dom";
 import {AuthContext} from "./SigninSignUp/AuthContext";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 
 const Navbar = ({totalItemsCount}) => {
 
     const[menu,setMenu] =useState("shop");
-    const { user } = useContext(AuthContext);
+    const {user,handleLogout} = useContext(AuthContext);
 
     return (
         <div className='navbar'>
@@ -29,10 +31,14 @@ const Navbar = ({totalItemsCount}) => {
             <div className="nav-login-cart">
 
                 {user ? (
+                    <div>
                     <div className="navbar-user">
-                        <img src={user.photoURL} alt="User" className="user-avatar" />
-                        <span>{user.displayName}</span>
+
+
                     </div>
+                    <button onClick={handleLogout}> <Avatar alt="user" src={user.photoURL} />Logout</button>
+                    </div>
+
                 ) : (
                     <Link to='/LoginSignup'><button>Login</button></Link>
                 )}
