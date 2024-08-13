@@ -10,9 +10,10 @@ import ShopCategory from "./Components/ShopCategory";
 import Shop from "./Components/Shop";
 import Product from "./Components/Product";
 import LoginSignup from "./Components/SigninSignUp/LoginSignup";
-import productDisplay from "./Components/productDisplay/ProductDisplay";
-import item from "./Items/Item";
+import {AuthProvider} from "./Components/SigninSignUp/AuthContext";
 function App() {
+
+
     const [cartItems, setCartItems] = useState([]);
     const totalItemsCount=cartItems.reduce((total,item)=>total+item.quantity,0);
 
@@ -29,8 +30,9 @@ function App() {
 
     return (
         <div className="App">
+            <AuthProvider>
             <BrowserRouter>
-                <Navbar totalItemsCount={totalItemsCount} />
+                <Navbar  totalItemsCount={totalItemsCount} />
 
                 <Routes>
                     <Route path='/' element={<Shop/>}></Route>
@@ -48,6 +50,7 @@ function App() {
                 </Routes>
                 <Footer/>
             </BrowserRouter>
+                </AuthProvider>
 
         </div>
     );
