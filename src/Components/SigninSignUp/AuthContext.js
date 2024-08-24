@@ -1,11 +1,16 @@
 // src/Context/AuthContext.js
-import React, { createContext, useState } from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import {auth, signOut} from "../../firebaseConfig";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    useEffect(() => {
+        return auth.onAuthStateChanged(user => {
+            setUser(user);
+        });
+    }, []);
 
     const handleLogout = async () => {
         try {
