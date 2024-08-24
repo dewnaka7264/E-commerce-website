@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css';
+import Button from '@mui/material/Button';
 
 const Cart = ({ cartItems, setCartItems }) => {
 
@@ -31,6 +32,7 @@ const Cart = ({ cartItems, setCartItems }) => {
     };
 
     return (
+        <div className="cartContainer">
         <div className="Cart">
             <h2>Shopping Cart</h2>
             {cartItems.length === 0 ? (
@@ -59,6 +61,14 @@ const Cart = ({ cartItems, setCartItems }) => {
                 </>
             )}
         </div>
+
+                <div className="checkout">
+                    <Button variant="contained">Proceed to checkout</Button>
+                </div>
+
+
+        </div>
+
     );
 };
 
