@@ -2,6 +2,18 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = ({ cartItems, setCartItems }) => {
+
+    /*// Load cart items from localStorage on initial render
+    useEffect(() => {
+        const savedCartItems = localStorage.getItem('cartItems');
+        if (savedCartItems) {
+            setCartItems(JSON.parse(savedCartItems));
+        }
+    }, [setCartItems]);*/
+
+    // https://www.youtube.com/watch?v=shLz_kmA68Q
+
+
     const handleRemove = (id) => {
         const updatedItems = cartItems.filter(item => item.id !== id);
         setCartItems(updatedItems);

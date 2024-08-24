@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar'; // Corrected import path
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Cart from "./Components/Cart";
-import Home from "./Components/Home";
+
 import Footer from "./Components/Footer/Footer";
 import ProductList from "./Components/ProductList/ProductList";
 import ShopCategory from "./Components/ShopCategory";
@@ -12,10 +12,20 @@ import Product from "./Components/Product";
 import LoginSignup from "./Components/SigninSignUp/LoginSignup";
 import {AuthProvider} from "./Components/SigninSignUp/AuthContext";
 function App() {
+    const cartFromLocalStorage= JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const [cartItems, setCartItems] = useState(cartFromLocalStorage);
+
+    // Save cart items to localStorage whenever they are updated
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
 
-    const [cartItems, setCartItems] = useState([]);
+
+
     const totalItemsCount=cartItems.reduce((total,item)=>total+item.quantity,0);
+
+
 
     const addToCart = (product, quantity, size) => {
         const itemIndex = cartItems.findIndex(item => item.id === product.id && item.size === size);
