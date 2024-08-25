@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import all_products from "../all_products";
-import axios from 'axios'; // You can use Axios or Fetch API for making HTTP requests
-
+import axios from 'axios'; //Axios or Fetch API for making HTTP requests
+import "./ManageProducts.css";
 const ManageProducts = () => {
     const [user, setUser] = useState(null);
     const [productName, setProductName] = useState('');
@@ -74,41 +74,57 @@ const ManageProducts = () => {
 
     return (
         <div>
-            <h2>Add New Product</h2>
-            <form onSubmit={handleAddProduct}>
-                <div>
-                    <label>Product Name:</label>
-                    <input
-                        type="text"
-                        value={productName}
-                        onChange={(e) => setProductName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Product Description:</label>
-                    <textarea
-                        value={productDescription}
-                        onChange={(e) => setProductDescription(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Product Price:</label>
-                    <input
-                        type="number"
-                        value={productPrice}
-                        onChange={(e) => setProductPrice(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Product Image:</label>
-                    <input type="file" onChange={handleImageChange} required />
-                </div>
-                <button type="submit">Add Product</button>
-            </form>
+            <div className="manageContainer">
+                <h2 className="formTitle">Add New Product</h2>
+                <form className="productForm" onSubmit={handleAddProduct}>
+                    <div className="formGroup">
+                        <label className="formLabel">Product Name:</label>
+                        <input
+                            type="text"
+                            className="formInput"
+                            value={productName}
+                            onChange={(e) => setProductName(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="formGroup formRadioGroup">
+                        <input type="radio" id="men" name="category" value="men" className="formRadio" />
+                        <label htmlFor="men" className="formRadioLabel">Men's</label>
+
+                        <input type="radio" id="women" name="category" value="women" className="formRadio" />
+                        <label htmlFor="women" className="formRadioLabel">Women's</label>
+
+                        <input type="radio" id="accessories" name="category" value="accessories" className="formRadio" />
+                        <label htmlFor="accessories" className="formRadioLabel">Accessories</label>
+                    </div>
+                    <div className="formGroup">
+                        <label className="formLabel">Product Description:</label>
+                        <textarea
+                            className="formTextarea"
+                            value={productDescription}
+                            onChange={(e) => setProductDescription(e.target.value)}
+                            required
+                        ></textarea>
+                    </div>
+                    <div className="formGroup">
+                        <label className="formLabel">Product Price:</label>
+                        <input
+                            type="number"
+                            className="formInput"
+                            value={productPrice}
+                            onChange={(e) => setProductPrice(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="formGroup">
+                        <label className="formLabel">Product Image:</label>
+                        <input type="file" className="formFileInput" onChange={handleImageChange} required />
+                    </div>
+                    <button type="submit" className="formButton">Add Product</button>
+                </form>
+            </div>
         </div>
+
     );
 };
 

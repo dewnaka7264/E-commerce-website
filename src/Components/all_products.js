@@ -454,6 +454,6 @@ const all_products = [
     },
 ];
 
-console.log(all_products);
+// console.log(all_products);
 
 export default all_products;
