@@ -87,7 +87,9 @@ const ManageProducts = () => {
                             required
                         />
                     </div>
+                    <label className="formLabel">Category</label>
                     <div className="formGroup formRadioGroup">
+
                         <input type="radio" id="men" name="category" value="men" className="formRadio" />
                         <label htmlFor="men" className="formRadioLabel">Men's</label>
 
