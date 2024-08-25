@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Navbar from './Components/Navbar'; // Corrected import path
+import Navbar from './Components/Navbar';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Cart from "./Components/Cart";
+import ManageProducts from "./Components/ManageProducts/ManageProducts";
 
 import Footer from "./Components/Footer/Footer";
 import ProductList from "./Components/ProductList/ProductList";
@@ -57,6 +58,7 @@ function App() {
 
                     <Route path='/cart' element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>}></Route>
                     <Route path='/LoginSignup' element={<LoginSignup/>}></Route>
+                    <Route path='/ManageProducts' element={<ManageProducts/>}></Route>
                 </Routes>
                 <Footer/>
             </BrowserRouter>

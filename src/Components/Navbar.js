@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {AuthContext} from "./SigninSignUp/AuthContext";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import manageProducts from "./ManageProducts/ManageProducts";
+
 
 const Navbar = ({totalItemsCount}) => {
 
@@ -29,7 +29,7 @@ const Navbar = ({totalItemsCount}) => {
                 <li  onClick={() => {setMenu('accessories')}}><Link style={{textDecoration:'none'}} to='/accessories'>ACCESSORIES</Link> {menu==="accessories"?<h/>:<></>}</li>
                 {user && user.email === "lithilakavi@gmail.com" ? (
                     <li>
-                        <Link style={{ textDecoration: 'none' }} to="/manageproducts">Manage Products</Link>
+                        <Link style={{ textDecoration: 'none' }} to="/ManageProducts">Manage Products</Link>
                     </li>
                 ) : null}
             </ul>
