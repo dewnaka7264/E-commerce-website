@@ -7,7 +7,8 @@ const ManageProducts = () => {
     const [user, setUser] = useState(null);
     const [productName, setProductName] = useState('');
     const [productDescription, setProductDescription] = useState('');
-    const [productPrice, setProductPrice] = useState('');
+    const [newPrice, setNewPrice] = useState('');
+    const [oldPrice, setOldPrice] = useState('');
     const [productImage, setProductImage] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -49,7 +50,8 @@ const ManageProducts = () => {
                 id: all_products.length + 1, // Assuming unique IDs are generated this way
                 name: productName,
                 description: productDescription,
-                price: parseFloat(productPrice),
+                newPrice: parseFloat(newPrice),
+                oldPrice: parseFloat(oldPrice),
                 image: response.data.fileName, // Get the file name from the server response
             };
 
@@ -59,7 +61,8 @@ const ManageProducts = () => {
             // Reset form fields
             setProductName('');
             setProductDescription('');
-            setProductPrice('');
+            setNewPrice('');
+            setOldPrice('');
             setProductImage(null);
             alert('Product added successfully!');
         } catch (error) {
@@ -109,12 +112,22 @@ const ManageProducts = () => {
                         ></textarea>
                     </div>
                     <div className="formGroup">
-                        <label className="formLabel">Product Price:</label>
+                        <label className="formLabel">New Price:</label>
                         <input
                             type="number"
                             className="formInput"
-                            value={productPrice}
-                            onChange={(e) => setProductPrice(e.target.value)}
+                            value={newPrice}
+                            onChange={(e) => setNewPrice(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="formGroup">
+                        <label className="formLabel">Old Price:</label>
+                        <input
+                            type="number"
+                            className="formInput"
+                            value={oldPrice}
+                            onChange={(e) => setOldPrice(e.target.value)}
                             required
                         />
                     </div>
