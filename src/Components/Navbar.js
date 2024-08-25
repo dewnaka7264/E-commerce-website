@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {AuthContext} from "./SigninSignUp/AuthContext";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-
+import manageProducts from "./ManageProducts/ManageProducts";
 
 const Navbar = ({totalItemsCount}) => {
 
@@ -27,6 +27,11 @@ const Navbar = ({totalItemsCount}) => {
                 <li  onClick={() => {setMenu('women')}}><Link style={{textDecoration:'none'}} to='/women'>WOMEN</Link>{menu==="women"?<h/>:<></>}</li>
                 <li  onClick={() => {setMenu('men')}}><Link style={{textDecoration:'none'}} to='/men'>MEN</Link>{menu==="men"?<h/>:<></>}</li>
                 <li  onClick={() => {setMenu('accessories')}}><Link style={{textDecoration:'none'}} to='/accessories'>ACCESSORIES</Link> {menu==="accessories"?<h/>:<></>}</li>
+                {user && user.email === "lithilakavi@gmail.com" ? (
+                    <li>
+                        <Link style={{ textDecoration: 'none' }} to="/manageproducts">Manage Products</Link>
+                    </li>
+                ) : null}
             </ul>
             <div className="nav-login-cart">
 
